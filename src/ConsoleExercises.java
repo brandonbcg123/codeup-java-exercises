@@ -25,12 +25,12 @@ public class ConsoleExercises {
 //        It only captures the first one when only using next()
 
         System.out.println("Please enter the length of the classroom.");
-        String length = scan.nextLine();
+        int length = Integer.parseInt(scan.nextLine());
         System.out.println("Please enter the width of the classroom.");
-        String width = scan.nextLine();
-        int area = Integer.parseInt(length) * Integer.parseInt (width);
+        int width = Integer.parseInt(scan.nextLine());
+        int area = length * width;
         System.out.println("The area of the room is: " + area);
-        int perimeter = (2 * Integer.parseInt(length)) + (2 * Integer.parseInt (width));
+        int perimeter = (2 * length) + (2 * width);
         System.out.println("The perimeter of the room is: " + perimeter);
     }
 }
