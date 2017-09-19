@@ -75,5 +75,6 @@ public class JavaSyntax {
 //        int y = 2;
 //        x /= y;
 //        y -= x;
+        //commented out because the use of the same variable
     }
 }
