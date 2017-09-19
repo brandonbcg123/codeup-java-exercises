@@ -22,7 +22,7 @@ public class JavaSyntax {
 
 //        long myNumber = 3.14;
 //        System.out.println(myNumber);
-//        A compling error occured;
+//        A compiling error occured;
 
 //        long myNumber = 123L;
 //        System.out.println(myNumber);
@@ -55,25 +55,25 @@ public class JavaSyntax {
 
 //        int x = 4;
 //        x = x + 5;
-        int x = 4;
-        x += 5;
+//        int x = 4;
+//        x += 5;
 
 //        int x = 3;
 //        int y = 4;
 //        y = y * x;
 
-        int x = 3;
-        int y = 4;
-        y *= x;
+//        int x = 3;
+//        int y = 4;
+//        y *= x;
 
 //        int x = 10;
 //        int y = 2;
 //        x = x / y;
 //        y = y - x;
 
-        int x = 10;
-        int y = 2;
-        x /= y;
-        y -= x;
+//        int x = 10;
+//        int y = 2;
+//        x /= y;
+//        y -= x;
     }
 }
