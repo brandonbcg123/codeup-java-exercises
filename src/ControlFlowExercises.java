@@ -51,5 +51,30 @@ public class ControlFlowExercises {
                 System.out.println(i);
             }
         }
+
+//        Problem 3.
+        System.out.println();
+    String continuation;
+        do {
+            int number;
+            int j = 1;
+            System.out.print("What number would you like to go up to? ");
+            number = loops.nextInt();
+
+            System.out.println("\nHere is your table!\n");
+
+            System.out.printf("%-10s|%-10s|%-10s\n", "Number", "Squared", "Cubed");
+            do {
+                String output = String.format("%-10s|%-10s|%-10s", j, j * j, j * j * j);
+                System.out.println(output);
+//            System.out.printf("%-10s|%-10s|%-10s \n", j , j * j , j * j *j);
+//            System.out.print(j * j);
+//            System.out.println(j * j * j);
+                j++;
+            } while (j <= number);
+            System.out.println("\nWould you like to continue?");
+            continuation = loops.next();
+        } while (continuation.equalsIgnoreCase("y"));
     }
+
 }
