@@ -64,6 +64,8 @@ public class ControlFlowExercises {
             System.out.println("\nHere is your table!\n");
 
             System.out.printf("%-10s|%-10s|%-10s\n", "Number", "Squared", "Cubed");
+
+            System.out.printf("%-10s|%-10s|%-10s\n", "------", "-------", "-----");
             do {
                 String output = String.format("%-10s|%-10s|%-10s", j, j * j, j * j * j);
                 System.out.println(output);
