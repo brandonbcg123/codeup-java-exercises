@@ -88,54 +88,45 @@ public class ControlFlowExercises {
 
             grade = loops.nextInt();
 
-        System.out.println("\nHere is your grade:");
-            if (grade <= 100 && grade >= 88) {
-                if(grade <= 100 && grade >= 96) {
-                    System.out.println("A+");
-                } else if (grade <= 95 && grade >= 92) {
-                    System.out.println("A");
-                } else if(grade <= 91 && grade >= 88) {
-                    System.out.println("A-");
-                }
-            } else if (grade <= 87 && grade >= 80) {
-                if(grade <= 87 && grade >= 85) {
-                    System.out.println("B+");
-                } else if (grade <= 84 && grade >= 82) {
-                    System.out.println("B");
-                } else if(grade <= 81 && grade >= 80) {
-                    System.out.println("B-");
-                }
-            } else if (grade <= 79 && grade >= 67) {
-                if(grade <= 79 && grade >= 75) {
-                    System.out.println("C+");
-                } else if (grade <= 74 && grade >= 71) {
-                    System.out.println("C");
-                } else if(grade <= 70 && grade >= 67) {
-                    System.out.println("C-");
-                }
-            } else if (grade <= 66 && grade >= 60) {
-                if(grade <= 66 && grade >= 64) {
-                    System.out.println("D+");
-                } else if (grade <= 63 && grade >= 62) {
-                    System.out.println("D");
-                } else if(grade <= 61 && grade >= 60) {
-                    System.out.println("D-");
-                }
-            } else if (grade <= 59 && grade >= 0) {
-                if(grade <= 59 && grade >= 50) {
-                    System.out.println("F+");
-                } else if (grade <= 49 && grade >= 40) {
-                    System.out.println("F");
-                } else if(grade <= 39 && grade >= 0) {
-                    System.out.println("F-");
-                }
+            System.out.println("\nHere is your grade:");
+//            if (grade <= 100 && grade >= 88) {
+            if (grade <= 100 && grade >= 96) {
+                System.out.println("A+");
+            } else if (grade <= 95 && grade >= 92) {
+                System.out.println("A");
+            } else if (grade <= 91 && grade >= 88) {
+                System.out.println("A-");
+            } else if (grade <= 87 && grade >= 85) {
+                System.out.println("B+");
+            } else if (grade <= 84 && grade >= 82) {
+                System.out.println("B");
+            } else if (grade <= 81 && grade >= 80) {
+                System.out.println("B-");
+            } else if (grade <= 79 && grade >= 75) {
+                System.out.println("C+");
+            } else if (grade <= 74 && grade >= 71) {
+                System.out.println("C");
+            } else if (grade <= 70 && grade >= 67) {
+                System.out.println("C-");
+            } else if (grade <= 66 && grade >= 64) {
+                System.out.println("D+");
+            } else if (grade <= 63 && grade >= 62) {
+                System.out.println("D");
+            } else if (grade <= 61 && grade >= 60) {
+                System.out.println("D-");
+            } else if (grade <= 59 && grade >= 50) {
+                System.out.println("F+");
+            } else if (grade <= 49 && grade >= 40) {
+                System.out.println("F");
+            } else if (grade <= 39 && grade >= 0) {
+                System.out.println("F-");
             } else {
-                System.out.println("Not a valid grade!");
-            }
-            System.out.println("\nWould you like to continue?");
-            moreGrades = loops.next();
-        } while (moreGrades.equalsIgnoreCase("y"));
+            System.out.println("Not a valid grade!");
+        }
+        System.out.println("\nWould you like to continue?");
+        moreGrades = loops.next();
+    } while(moreGrades.equalsIgnoreCase("y"));
 
-    }
+}
 
 }
