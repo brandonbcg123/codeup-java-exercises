@@ -123,12 +123,12 @@ public class ControlFlowExercises {
             } else if (grade <= 39 && grade >= 0) {
                 System.out.println("F-");
             } else {
-            System.out.println("Not a valid grade!");
-        }
-        System.out.println("\nWould you like to continue?");
-        moreGrades = loops.next();
-    } while(moreGrades.equalsIgnoreCase("y"));
+                System.out.println("Not a valid grade!");
+            }
+            System.out.println("\nWould you like to continue?");
+            moreGrades = loops.next();
+        } while (moreGrades.equalsIgnoreCase("y"));
 
-}
+    }
 
 }
