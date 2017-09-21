@@ -27,7 +27,7 @@ public class StringExercise {
 
         message += "\nIn windows, the main drive is usually C:\\\n";
 
-        message += "I can do backslashes \\, double backslashes \\\\, and the amazing triple backslash \\\\\\!";
+        message += "\nI can do backslashes \\, double backslashes \\\\,\nand the amazing triple backslash \\\\\\!";
 
         System.out.println(message);
 
