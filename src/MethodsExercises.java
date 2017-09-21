@@ -1,13 +1,25 @@
 import java.util.Scanner;
 
 public class MethodsExercises {
+
+    public static Scanner scan = new Scanner(System.in);
+
     public static void main(String[] args) {
+
         System.out.println(add(4, 6));
         System.out.println(subtract(4, 6));
         System.out.println(multiply(4, 6));
         System.out.println(divide(4, 6));
         System.out.println(module(4, 6));
-        int userNumber = getInteger(4, 11);
+//        int userNumber = getInteger(4, 11);
+        String ask;
+        do {
+            long userNumber = (long) getInteger(1, 10);
+            System.out.println(numberFactorial(userNumber));
+            System.out.println("Do you want to enter a new number? y/n");
+            ask = scan.next();
+        } while (ask.equalsIgnoreCase("y") || (ask.equalsIgnoreCase("yes")));
+
     }
 
     //        Problem 1
@@ -34,7 +46,6 @@ public class MethodsExercises {
 
     //    Problem 2
     public static int getInteger(int min, int max) {
-        Scanner scan = new Scanner(System.in);
         System.out.println("Enter a number between " + min + " and " + max);
         int userInput = scan.nextInt();
         if (userInput < min || userInput > max) {
@@ -43,5 +54,18 @@ public class MethodsExercises {
         } else {
             return userInput;
         }
+    }
+
+    //    Problem 3
+    public static String numberFactorial(long userNumber) {
+        long factorNumber = 1;
+        StringBuilder output = new StringBuilder(userNumber + "! = ");
+        for (long i = 1; i <= userNumber; i++) {
+            factorNumber *= i;
+            output.append(i + " x ");
+        }
+        output.deleteCharAt(output.toString().lastIndexOf('x'));
+        output.append(" = " + factorNumber);
+        return output.toString();
     }
 }
