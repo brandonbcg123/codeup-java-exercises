@@ -9,20 +9,20 @@ public class Bob {
         String keepTalking;
 
         do {
-        System.out.println("Talk to Bob");
+            System.out.println("Talk to Bob");
             userAnswers = scan.nextLine();
             if (userAnswers.endsWith("?")) {
                 System.out.println("Sure");
+            } else if (userAnswers.endsWith("!") || (userAnswers.toUpperCase().equals(userAnswers) && !userAnswers.isEmpty())) {
+                System.out.println("Whoa, chill out!");
             } else if (userAnswers.isEmpty()) {
                 System.out.println("Fine. Be that way!");
-            } else if (userAnswers.endsWith("!") || userAnswers.toUpperCase().equals(userAnswers)) {
-                System.out.println("Whoa, chill out!");
             } else {
                 System.out.println("Whatever");
             }
             System.out.println("Do you want to keep talking to Bob? y/n");
             keepTalking = scan.nextLine();
-        } while (keepTalking.equalsIgnoreCase("y"));
+        } while (keepTalking.equalsIgnoreCase("y") || (keepTalking.equalsIgnoreCase("yes")));
     }
 }
 //    Create a class Bob for the following exercise with a main method. Bob is a lackadaisical teenager. In conversation, his responses are very limited.
