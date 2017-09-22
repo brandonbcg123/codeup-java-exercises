@@ -22,8 +22,8 @@ public class MethodsExercises {
             ask = scan.next();
         } while (ask.equalsIgnoreCase("y") || (ask.equalsIgnoreCase("yes")));
 
-        String rollAgain;
         String rolling;
+        String rollAgain;
         do {
             System.out.println("\nYou ready to roll the dice? y/n");
             rolling = scan.next();
@@ -86,7 +86,6 @@ public class MethodsExercises {
     }
 
     //    Problem 4
-
 
     public static void rollingDice(int userSides) {
         int sides = 0;
