@@ -88,44 +88,10 @@ public class MethodsExercises {
     //    Problem 4
 
     public static void rollingDice(int userSides) {
-        int sides = 0;
+
         int diceSidesOne = (int) (Math.random() * (userSides) + 1);
         int diceSidesTwo = (int) (Math.random() * (userSides) + 1);
         System.out.println("Dice One landed on " + diceSidesOne);
         System.out.println("Dice Two landed on " + diceSidesTwo);
     }
 }
-
-//                if(die1 + die2 == sum)
-//                {
-//                    match = 0;
-//                    match++;
-//                }
-//                double probability = 0.0;
-//                probability = (double)match / numRolls * 100;
-//                System.out.println("     " + sum + "\t\t" + probability);
-//            }
-//            // Random number between 0 and 1.
-//            double a = Math.random();
-//            double b = Math.random();
-
-//}
-
-//    public static double rollingDice(double diceOne, double diceTwo) {
-//        double value = Math.randomRandom diceRoller = new Random();
-//        diceOne = Math.random();
-//        diceTwo = Math.random();
-
-// print the numbers and print the higher one
-//        System.out.println("Random number 1:" + diceTwo);
-//        System.out.println("Random number 2:" + diceOne);
-//    } return diceOne, diceTwo;
-//        System.out.println("Highest number:" + Math.max(diceOne, diceTwo));
-//}
-
-//        if (userInput < min || userInput > max) {
-//            System.out.println("This is an invalid input, please try again.");
-//            return getInteger(min, max);
-//        } else {
-//            return userInput;
-//        }
