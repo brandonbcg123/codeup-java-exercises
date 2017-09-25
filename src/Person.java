@@ -6,7 +6,7 @@ public class Person {
 
     public String getName(){
         return this.name;
-        //getter makes sure its readeable
+        //getter makes sure its readable
     }
 
     public void setName (String name){
