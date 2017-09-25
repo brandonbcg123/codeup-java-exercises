@@ -11,13 +11,13 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
-    String getString(String prompt) {
+    public String getString(String prompt) {
         System.out.println(prompt);
         String userInput = scanner.next();
         return userInput;
     }
 
-    Boolean yesNo(String prompt) {
+    public Boolean yesNo(String prompt) {
         System.out.println(prompt);
         String userInput = scanner.next();
         if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
@@ -27,7 +27,7 @@ public class Input {
         }
     }
 
-    int getInt(String prompt, int min, int max) {
+    public int getInt(String prompt, int min, int max) {
         System.out.println(prompt);
         int userInput = scanner.nextInt();
         if (userInput < min || userInput > max) {
@@ -38,13 +38,13 @@ public class Input {
         }
     }
 
-    int getInt(String prompt){
+    public int getInt(String prompt){
         System.out.println(prompt);
         int userInput = scanner.nextInt();
         return userInput;
     }
 
-    double getDouble(String prompt, double min, double max) {
+    public double getDouble(String prompt, double min, double max) {
         System.out.println(prompt);
         double userInput = scanner.nextDouble();
         if (userInput < min || userInput > max) {
@@ -55,7 +55,7 @@ public class Input {
         }
     }
 
-    double getDouble(String prompt){
+    public double getDouble(String prompt){
         System.out.println(prompt);
         double userInput = scanner.nextDouble();
         return userInput;
