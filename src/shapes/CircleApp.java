@@ -9,12 +9,13 @@ public class CircleApp {
     Scanner scan = new Scanner(System.in);
     Input input = new Input();
 
+    boolean moreCircles;
     double radius;
-    radius = input.getDouble("enter a radius");
-
-    Circle circle = new Circle(radius);
-
+    do {
+        radius = input.getDouble("enter a radius");
+        Circle circle = new Circle(radius);
         System.out.println("The area of the circle:" + circle.getArea());
         System.out.println("The circumference of the circle:" + circle.getCircumference());
+    } while (moreCircles = input.yesNo("Would you like to make another circle?"));
     }
 }
