@@ -13,7 +13,7 @@ public class Input {
 
     public String getString(String prompt) {
         System.out.println(prompt);
-        String userInput = scanner.next();
+        String userInput = scanner.nextLine();
         return userInput;
     }
 
@@ -34,6 +34,7 @@ public class Input {
             System.out.println("This is an invalid input, please try again.");
             return getInt(prompt, min, max);
         } else {
+            scanner.nextLine();
             return userInput;
         }
     }
