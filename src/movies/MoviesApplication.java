@@ -3,8 +3,12 @@ package movies;
 
 import util.Input;
 
+import java.util.Arrays;
+
 
 public class MoviesApplication {
+    private static Movie[] movies = MoviesArray.findAll();
+
     public static void main(String[] args) {
         int userInput;
 
@@ -18,7 +22,8 @@ public class MoviesApplication {
             System.out.println("3 - view movies in the drama category");
             System.out.println("4 - view movies in the horror category");
             System.out.println("5 - view movies in the scifi category");
-            userInput = input.getInt("Enter your choice: ", 0, 5);
+            System.out.println("6 - add movie to the list");
+            userInput = input.getInt("Enter your choice: ", 0, 6);
 
             if (userInput == 1) {
                 showFilteredMovies("all");
@@ -30,18 +35,32 @@ public class MoviesApplication {
                 showFilteredMovies("horror");
             } else if (userInput == 5) {
                 showFilteredMovies("scifi");
+            } else if (userInput == 6) {
+                userAdd(input);
             }
         } while (userInput != 0);
     }
 
     public static void showFilteredMovies(String category) {
 
-        Movie[] movies = MoviesArray.findAll();
 
         for (Movie movie : movies) {
             if (movie.getCategory().equalsIgnoreCase(category) || category.equalsIgnoreCase("all"))
                 System.out.println(movie.getName() + " -- " + movie.getCategory());
         }
+
     }
 
+    public static void userAdd(Input input) {
+        String newMovieName = input.getString("Enter a name of a movie");
+
+        String newMovieCategory = input.getString("Enter the category of the movie");
+
+        Movie newMovie = new Movie(newMovieName, newMovieCategory);
+
+        int size = movies.length;
+
+        movies = Arrays.copyOf(movies, size + 1);
+        movies[size] = newMovie;
+    }
 }
