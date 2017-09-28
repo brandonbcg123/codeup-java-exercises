@@ -9,11 +9,12 @@ public class Rectangle {
         this.width = width;
     }
 
-    public double getAreaRectangle () {
+    public double getPerimeter () {
+        return (2 * length) + (2 * width);
+    }
+
+    public double getArea () {
         return length * width;
     }
 
-    public double getPerimeterRectangle () {
-        return (2 * length) + (2 * width);
-    }
 }
