@@ -2,29 +2,23 @@ package shapes;
 
 public class ShapesTest {
     public static void main(String[] args) {
-       Rectangle box1 = new Rectangle(4, 5);
-        System.out.println("The perimeter of the rectangle is: " + box1.getPerimeter());
-        System.out.println("The area of the rectangle is: " + box1.getArea());
-        Rectangle box2 = new Square(6);
-        System.out.println("The perimeter of the square is: " + box2.getPerimeter());
-        System.out.println("The area of the square is: " + box2.getArea());
-        showRectangleInfo(box1);
-        showRectangleInfo(box2);
+        Measurable myShape = new Square(7.3);
+        showRectangleInfo(myShape);
+        myShape = new Rectangle(6.3, 7.7);
+        showRectangleInfo(myShape);
        }
 
-    public static void showRectangleInfo (Rectangle rectangle) {
+    public static void showRectangleInfo (Measurable rectangle) {
         System.out.println(rectangle.getPerimeter());
         System.out.println(rectangle.getArea());
     }
 
-    }
-//    ** Bonus **
-//
-//            1. Inside of `ShapesTest`, create a static method named `showRectangleInfo`
-//        that accepts an object of type `Rectangle` and displays the rectangle's
-//        area and perimeter.
-//
-//
-// answer:
-// Can you pass an object of type `Square` to this method?
-//yes because it is inherited from the rectangle class because I made the class square extended from the rectangle class.
+}
+
+//9. Why does the code fail to compile if you leave off the getPerimeter method in Rectangle?
+
+//Answer: The code would fail to compile if I left off the getPerimeter method in Rectangle because it would not be defined as it would not have been implemented because every method that's declared as a method of the interface must be implemented by any class that uses the interface.
+
+//10. What happens if you try to call the getLength or getWidth methods of the myShape variable? Why?
+
+//Answer: It would result in an error because the getLength and getWidth methods of the myShape variable does not exist for the type Measurable, as they are not declared in the Measurable variable..
