@@ -21,6 +21,10 @@ public class Student {
         grades.add(grade);
     }
 
+    public ArrayList<Integer> getGrades() {
+        return this.grades;
+    }
+
     public double getGradeAverage() {
         double total = 0;
 
@@ -31,14 +35,14 @@ public class Student {
         return total / grades.size();
     }
 
-    public static void main(String[] args) {
-        Student student = new Student("Timmy");
-        student.grades.add(100);
-        student.grades.add(100);
-        student.grades.add(100);
-        student.grades.add(50);
-        student.grades.add(50);
-        student.grades.add(50);
-        System.out.println(student.getName() + "'s average grade: " + student.getGradeAverage());
-    }
+//    public static void main(String[] args) {
+//        Student student = new Student("Timmy");
+//        student.grades.add(100);
+//        student.grades.add(100);
+//        student.grades.add(100);
+//        student.grades.add(50);
+//        student.grades.add(50);
+//        student.grades.add(50);
+//        System.out.println(student.getName() + "'s average grade: " + student.getGradeAverage());
+//    }
 }
