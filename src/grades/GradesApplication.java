@@ -55,6 +55,8 @@ public class GradesApplication {
     }
 
     public static void gradeDisplay(Student student) {
+        //Only have to use Student data type here because I'm just looking for individual students
+
         double classTotal = 0;
 
         double studentAvg = student.getGradeAverage();
@@ -70,6 +72,8 @@ public class GradesApplication {
     }
 
     public static double getClassAvg(HashMap<String, Student> students) {
+        //Have to use whole HashMap types here because I want to select all the students
+
         double classTotal = 0;
 
         for (Student student : students.values()) {
