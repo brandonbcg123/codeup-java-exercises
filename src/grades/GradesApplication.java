@@ -34,31 +34,47 @@ public class GradesApplication {
             for (String usernames : students.keySet()) {
                 System.out.println(usernames);
             }
-            String userInput = input.getString("Enter a Username: ");
-            if(students.containsKey(userInput)){
-                System.out.println("Student's Name: " + students.get(userInput).getName());
-                System.out.println("Student's Grade average: " + students.get(userInput).getGradeAverage());
-            }else{
+            String userInput = input.getString("Enter a student's github username or 'all' for the whole class: ");
+            if (students.containsKey(userInput)) {
+                gradeDisplay(students.get(userInput));
+                System.out.println("Class Avg: " + getClassAvg(students));
+            } else if (userInput.equalsIgnoreCase("all")) {
+                for (Student student : students.values()) {
+                    gradeDisplay(student);
+                }
+                System.out.println("Class Avg: " + getClassAvg(students));
+            } else {
                 System.out.println("NO STUDENTS BY THAT USERNAME!!!");
             }
             continueOn = input.getString("Do you want to continue");
         } while (continueOn.equalsIgnoreCase("y")
                 || (continueOn.equalsIgnoreCase("yes")));
+
         System.out.println("Goodbye, and have a wonderful day!");
 
-//        System.out.println(students.get("nicholasgswan").getGradeAverage());
+    }
 
+    public static void gradeDisplay(Student student) {
+        double classTotal = 0;
 
-        // Iterating over keys only
-//        for (String key : map.keySet()) {
-//            System.out.println("Key = " + key);
-//        }
-//
-//// Iterating over values only
-//        for (String value : map.values()) {
-//            System.out.println("Value = " + value);
-//        }
+        double studentAvg = student.getGradeAverage();
+        classTotal += studentAvg;
 
+        System.out.println(student.getName() + "'s grades:");
+        for (Integer grade : student.getGrades()) {
+            System.out.println(grade);
+        }
 
+        System.out.println(studentAvg + " avg");
+//        System.out.println("Class Average: " + (classTotal / student.size()));
+    }
+
+    public static double getClassAvg(HashMap<String, Student> students) {
+        double classTotal = 0;
+
+        for (Student student : students.values()) {
+            classTotal += student.getGradeAverage();
+        }
+        return classTotal / students.size();
     }
 }
