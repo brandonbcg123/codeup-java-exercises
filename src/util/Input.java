@@ -2,8 +2,6 @@ package util;
 
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
-
 //Problem 3
 public class Input {
 
@@ -81,5 +79,29 @@ public class Input {
     public double getDouble(String prompt){
         System.out.println(prompt);
         return getDouble();
+    }
+
+//    Bonus 1
+    public int getBinary() {
+        System.out.println("Enter a Binary number.");
+        String userInput = scanner.nextLine();
+        try {
+            return Integer.valueOf(userInput, 2);
+        } catch (NumberFormatException nfe) {
+            System.out.println("Sorry, you did not enter a Binary number. Please try again.");
+            return getBinary();
+        }
+    }
+
+//    Bonus 2
+    public int getHexidecimal() {
+        System.out.println("Enter a Hexidecimal number.");
+        String userInput = scanner.nextLine();
+        try {
+            return Integer.valueOf(userInput, 16);
+        } catch (NumberFormatException nfe) {
+            System.out.println("Sorry, you did not enter a Hexidecimal number. Please try again.");
+            return getBinary();
+        }
     }
 }
