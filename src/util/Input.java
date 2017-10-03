@@ -101,7 +101,7 @@ public class Input {
             return Integer.valueOf(userInput, 16);
         } catch (NumberFormatException nfe) {
             System.out.println("Sorry, you did not enter a Hexidecimal number. Please try again.");
-            return getBinary();
+            return getHexidecimal();
         }
     }
 }
