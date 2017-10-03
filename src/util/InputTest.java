@@ -23,5 +23,10 @@ public class InputTest {
         double pickDoubleNumber = input.getDouble("Pick a number.");
         System.out.println(pickDoubleNumber);
 
+        int binaryNumber = input.getBinary();
+        System.out.println("Your Binary number has been converted to: " + binaryNumber);
+
+        int hexidecimal = input.getHexidecimal();
+        System.out.println("Your Hexidecimal number has been converted to: " + hexidecimal);
     }
 }
